@@ -7,50 +7,51 @@
  * Criamos constantes no formato camelCase.
  * As constantes são case-sensitive.
  * Não podemos modificar o valor de uma constante:
- * 
- *      TypeError: Assignment to constant variable.
+ * ↪   TypeError: Assignment to constant variable.
  * 
  * Não podemos declarar uma constante sem inicializa-la:
- * 
- *      const nome;
+ * ↪   const nome;
  *      SyntaxError: Missing initializer in const declaration
  * 
  * String = texto
  * Number = número
  * 
  * A soma entre um number e um string resulta em uma concatenação entre ambos.
- * O javascript é uma linguagem de tipagem dinâmica.
-*/
+ * O javascript é uma linguagem de tipagem dinâmica e fraca.
+ */
 
 
-const nomeCompleto = 'Erick Ferreira';
-console.log(nomeCompleto);
+const fullName = "Erick Ferreira";
+console.log(fullName);
 console.log();
 
-const primeiroNumero = 5;
-const segundoNumero = 10;
-const terceiroNumero = '3';
+const firstNumber = 5;
+const secondNumber = 10;
+const thirdNumber = "5";
+const result = firstNumber * secondNumber;
+console.log(result);
 
-const resultado = primeiroNumero * segundoNumero;
-console.log(resultado);
-
-const resultadoDuplicado = resultado * 2;
-console.log(resultadoDuplicado);
-
-let resultadoTriplicado = resultado * 3;
-console.log(resultadoTriplicado);
-
-resultadoTriplicado += 5;
-console.log(resultadoTriplicado);
+const duplicateResult = result * 2;
+console.log(duplicateResult);
 console.log();
 
+let tripledResult = result * 3;
+console.log(tripledResult);
 
-console.log(typeof primeiroNumero);
-console.log(typeof segundoNumero);
-console.log(typeof terceiroNumero);
+tripledResult += 5;
+console.log(tripledResult);
 console.log();
 
 
-console.log(typeof (primeiroNumero + segundoNumero), primeiroNumero + segundoNumero);
-console.log(typeof (primeiroNumero + terceiroNumero), primeiroNumero + terceiroNumero);
+console.log(firstNumber);
+console.log();
+
+
+console.log(firstNumber, typeof firstNumber);
+console.log(secondNumber, typeof secondNumber);
+console.log(thirdNumber, typeof thirdNumber);
+console.log();
+
+
+console.log(thirdNumber + secondNumber, typeof(thirdNumber + secondNumber));
 console.log();
